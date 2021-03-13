@@ -1,14 +1,19 @@
 <template>
   <div id="app">
+    <ConsultancyCard>
+    </ConsultancyCard>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import Card from './components/Card.vue';
+import ConsultancyCard from './components/ConsultancyCard.vue';
 
 export default Vue.extend({
   name: 'App',
+  components: {
+    ConsultancyCard,
+  },
 });
 </script>
 
