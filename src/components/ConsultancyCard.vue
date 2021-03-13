@@ -24,15 +24,14 @@ export default Vue.extend({
 .card {
   display: flex;
   flex-direction: column;
-  width: 370px;
-  height: 635px;
+  width: 30%;
   border: 4px solid #313072;
   padding: 25px 15px;
   text-align: left;
 
   p {
     color: #313072;
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .topSubtitle {
@@ -41,7 +40,7 @@ export default Vue.extend({
   }
 
   .title-top, .title-bottom {
-    font-size: 118px;
+    font-size: 138px;
     font-weight: bold;
   }
 
@@ -50,7 +49,7 @@ export default Vue.extend({
   }
 
   .subtitle {
-    font-size: 32px;
+    font-size: 38px;
     margin: 80px 0;
   }
 
