@@ -9,6 +9,10 @@
     <div class='blog'>
       <BlogDelimiter>
       </BlogDelimiter>
+      <div class="posts">
+        <PostCard></PostCard>
+        <PostCard></PostCard>
+      </div>
     </div>
   </div>
 </template>
@@ -18,6 +22,7 @@ import Vue from 'vue';
 import ConsultancyCard from './components/ConsultancyCard.vue';
 import FormCard from './components/FormCard.vue';
 import BlogDelimiter from './components/BlogDelimiter.vue';
+import PostCard from './components/PostCard.vue';
 
 export default Vue.extend({
   name: 'App',
@@ -25,6 +30,7 @@ export default Vue.extend({
     ConsultancyCard,
     FormCard,
     BlogDelimiter,
+    PostCard,
   },
 });
 </script>
@@ -65,7 +71,12 @@ body {
 
 .blog {
   display: flex;
+  flex-direction: column;
   margin-left: -20px;
   margin-top: 70px;
+
+  .posts {
+    display: flex;
+  }
 }
 </style>
