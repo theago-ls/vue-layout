@@ -35,7 +35,7 @@ export default Vue.extend({
   }
 
   .topSubtitle {
-    margin-bottom: -25px;
+    margin-bottom: -35px;
     margin-left: 8px;
   }
 

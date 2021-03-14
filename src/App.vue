@@ -42,10 +42,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  padding: 30px 20px;
+  padding: 21% 20px;
   background-image: url('./assets/family-background.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: 0 265%;
+  background-position: 0 0;
 }
 </style>
