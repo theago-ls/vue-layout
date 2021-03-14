@@ -2,17 +2,21 @@
   <div id="app">
     <ConsultancyCard>
     </ConsultancyCard>
+    <FormCard>
+    </FormCard>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import ConsultancyCard from './components/ConsultancyCard.vue';
+import FormCard from './components/FormCard.vue';
 
 export default Vue.extend({
   name: 'App',
   components: {
     ConsultancyCard,
+    FormCard,
   },
 });
 </script>
@@ -30,6 +34,7 @@ body {
 
 #app {
   display: flex;
+  justify-content: center;
   height: 100%;
   width: 100%;
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -41,6 +46,6 @@ body {
   background-image: url('./assets/family-background.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: 0 -500px;
+  background-position: 0 265%;
 }
 </style>
