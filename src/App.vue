@@ -37,13 +37,13 @@ export default Vue.extend({
 
 <style lang="less">
 * {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 
 #app {
@@ -57,6 +57,7 @@ body {
   text-align: center;
   color: #2c3e50;
   padding: 19% 20px;
+  padding-bottom: 5%;
   background-image: url('./assets/family-background.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
@@ -77,6 +78,28 @@ body {
 
   .posts {
     display: flex;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  #app {
+    background-size: 120%;
+    background-position: 10% 0;
+    padding: 19% 0px;
+  }
+
+  .top-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog {
+    flex-direction: column;
+
+    .posts {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
 </style>

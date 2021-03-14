@@ -24,14 +24,14 @@ export default Vue.extend({
 .card {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 31%;
   border: 4px solid #313072;
   padding: 25px 15px;
   text-align: left;
 
   p {
     color: #313072;
-    font-size: 30px;
+    font-size: 1.8rem;
   }
 
   .topSubtitle {
@@ -40,7 +40,7 @@ export default Vue.extend({
   }
 
   .title-top, .title-bottom {
-    font-size: 138px;
+    font-size: 6.4rem;
     font-weight: bold;
   }
 
@@ -51,6 +51,7 @@ export default Vue.extend({
   .subtitle {
     font-size: 38px;
     margin: 80px 0;
+    margin-left: 10px;
   }
 
   button {
@@ -63,6 +64,26 @@ export default Vue.extend({
     background-color: #ff9b23;
     border: none;
     width: 95%;
+  }
+}
+
+@media screen and (max-width: 968px){
+  .card {
+    width: 88%;
+  }
+}
+
+@media screen and (max-width: 728px){
+  .card {
+    width: 85%;
+
+    .title-top, .title-bottom {
+      font-size: 88px;
+    }
+
+    .subtitle {
+      font-size: 28px;
+    }
   }
 }
 </style>

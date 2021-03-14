@@ -75,4 +75,17 @@ export default Vue.extend({
     margin-top: 30px;
   }
 }
+
+@media screen and (max-width: 968px){
+  .card {
+    width: 88%;
+    margin-left: 4%;
+  }
+}
+
+@media screen and (min-width: 1920px){
+  .card {
+    margin-left: 11.3%;
+  }
+}
 </style>
