@@ -33,25 +33,27 @@ export default Vue.extend({
   display: flex;
   flex-direction: column;
   width: 30%;
+  height: 60%;
   background: #313072;
-  padding: 45px 35px;
+  padding: 25px 35px;
   text-align: left;
   transform: translateY(50%);
 
   .title {
-    font-size: 42px;
+    font-size: 38px;
     font-weight: bold;
     color: #ff9b23;
+    line-height: 1.2;
   }
 
   .subtitle {
-    font-size: 32px;
+    font-size: 28px;
     margin: 20px 0;
     color: rgba(255,255,255,0.8);
   }
 
   button {
-    margin-top: 40px;
+    margin-top: 30px;
   }
 }
 </style>
