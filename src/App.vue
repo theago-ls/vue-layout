@@ -6,14 +6,7 @@
       <FormCard>
       </FormCard>
     </div>
-    <div class='blog'>
-      <BlogDelimiter>
-      </BlogDelimiter>
-      <div class="posts">
-        <PostCard></PostCard>
-        <PostCard></PostCard>
-      </div>
-    </div>
+    <Blog :loading="loading" :posts="posts"/>
   </div>
 </template>
 
@@ -21,16 +14,31 @@
 import Vue from 'vue';
 import ConsultancyCard from './components/ConsultancyCard.vue';
 import FormCard from './components/FormCard.vue';
-import BlogDelimiter from './components/BlogDelimiter.vue';
-import PostCard from './components/PostCard.vue';
+import Blog from './components/Blog.vue';
 
 export default Vue.extend({
   name: 'App',
   components: {
     ConsultancyCard,
     FormCard,
-    BlogDelimiter,
-    PostCard,
+    Blog,
+  },
+  data: () => ({
+    loading: false,
+    posts: null,
+  }),
+  created() {
+    this.fetchPosts();
+  },
+  methods: {
+    fetchPosts() {
+      this.loading = true;
+
+      fetch('http://jsonplaceholder.typicode.com/posts').then((res) => res.json()).then((posts) => {
+        this.posts = posts;
+        this.loading = false;
+      });
+    },
   },
 });
 </script>
@@ -70,17 +78,6 @@ body {
   justify-content: center;
 }
 
-.blog {
-  display: flex;
-  flex-direction: column;
-  margin-left: -20px;
-  margin-top: 70px;
-
-  .posts {
-    display: flex;
-  }
-}
-
 @media screen and (max-width: 968px) {
   #app {
     background-size: 120%;
@@ -91,15 +88,6 @@ body {
   .top-cards {
     flex-direction: column;
     align-items: center;
-  }
-
-  .blog {
-    flex-direction: column;
-
-    .posts {
-      flex-direction: column;
-      align-items: center;
-    }
   }
 }
 </style>

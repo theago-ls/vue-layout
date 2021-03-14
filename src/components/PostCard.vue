@@ -4,15 +4,10 @@
         <img class='photo' src='../assets/marketing-digital.jpg'/>
         <div class="post-text">
           <p class='title'>
-            Entenda mais sobre o crescimento do
-            marketing digital no Brasil
+            {{ title }}
           </p>
           <p class='firstParagraph'>
-            De acordo com o IBGE, o número de pessoas
-            que acessam a internet vem crescendo a cada
-            dia. Já são mais de 100 milhões de pessoas
-            conectadas no Brasil, considerando a população
-            de todas regiões...
+            {{ firstParagraph }}
           </p>
         </div>
     </div>
@@ -28,6 +23,10 @@ export default Vue.extend({
   name: 'ConsultancyCard',
   components: {
     Button,
+  },
+  props: {
+    title: String,
+    firstParagraph: String,
   },
 });
 </script>
@@ -67,6 +66,11 @@ export default Vue.extend({
       .firstParagraph {
         margin-top: 15px;
         font-size: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* number of lines to show */
+        -webkit-box-orient: vertical;
       }
     }
   }
